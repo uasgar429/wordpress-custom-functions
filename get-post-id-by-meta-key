@@ -1,6 +1,6 @@
-function getPostIdByMetaKey($meta_key,$meta_value){
+public function getPostIdByMetaKey($meta_key,$meta_value){
 	 global $wpdb;
-	 $q="SELECT * FROM ".$wpdb->prefix."postmeta WHERE meta_key =".$meta_key."' AND meta_value='".$meta_value."'";
+	echo  $q="SELECT * FROM ".$wpdb->prefix."postmeta WHERE meta_key ='".$meta_key."' AND meta_value='".$meta_value."'";
 	 $row = $wpdb->get_row($q);
 	 if($row){
 			return $row->post_id;
